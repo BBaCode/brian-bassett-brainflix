@@ -1,0 +1,15 @@
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/reset";
+
+.sidebar {
+  font-size: 13px;
+  font-family: AvenirNextLTPro-Regular;
+  margin: 1rem 1rem 0;
+  &-header {
+    color: $silver;
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+}

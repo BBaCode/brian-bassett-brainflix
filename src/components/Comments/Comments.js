@@ -2,7 +2,6 @@ import "./Comments.scss";
 import React from "react";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-
 import commentDetails from "../../data/video-details.json";
 import CommentCard from "../CommentCard/CommentCard";
 
