@@ -4,6 +4,10 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/reset";
 
+header {
+  font-family: "AvenirNextLTPro-Regular";
+}
+
 .header {
   display: flex;
   flex-direction: column;
