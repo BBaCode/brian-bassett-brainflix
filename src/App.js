@@ -1,8 +1,14 @@
 import "./App.css";
 import Header from "./components/Header/Header";
+import Video from "./components/Video/Video";
 
 function App() {
-  return <Header title="BrainFlix" />;
+  return (
+    <div>
+      <Header />
+      <Video title="video" />
+    </div>
+  );
 }
 
 export default App;

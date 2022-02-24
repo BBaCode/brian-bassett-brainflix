@@ -1,0 +1,59 @@
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/reset";
+
+.video {
+  font-family: AvenirNextLTPro-Regular;
+  &-box {
+    border-bottom: 1px solid $mercury;
+  }
+  &-hero {
+    width: 100vw;
+    height: 215px;
+  }
+  &-info {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &-title {
+    padding: 1rem 0;
+    &-item {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+  &-details {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    &-left {
+      margin-right: 5rem;
+    }
+    &-header {
+      font-size: 0.8125rem;
+      padding-bottom: 1rem;
+      color: $silver;
+      &--bold {
+        font-weight: 700;
+        color: $black;
+      }
+    }
+  }
+  &-icon-box {
+    display: flex;
+    align-items: center;
+  }
+  &-icon {
+    padding-bottom: 1rem;
+    margin-right: 0.5rem;
+  }
+  &-description {
+    padding: 1rem 0;
+    &-paragraph {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+  }
+}
