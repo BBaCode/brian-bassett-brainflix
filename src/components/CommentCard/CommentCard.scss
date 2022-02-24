@@ -1,0 +1,29 @@
+@import "../../styles/partials/colors";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/reset";
+
+.comments-list {
+  display: flex;
+  padding-bottom: 1rem;
+  font-size: 13px;
+  line-height: 1.125rem;
+  color: $dark-black;
+  border-bottom: 1px solid $mercury;
+  &-right {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 0 1rem;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+    }
+  }
+  &-name--bold {
+    font-weight: 700;
+  }
+  &-date--color {
+    color: $silver;
+  }
+}
