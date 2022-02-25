@@ -21,9 +21,10 @@
     }
   }
   &-name--bold {
-    font-weight: 700;
+    @include subHeader;
   }
   &-date--color {
+    @include label;
     color: $silver;
   }
 }

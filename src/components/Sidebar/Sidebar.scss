@@ -9,7 +9,7 @@
   margin: 1rem 1rem 0;
   &-header {
     color: $silver;
-    font-weight: 700;
+    @include label;
     padding-bottom: 1rem;
   }
 }

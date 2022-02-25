@@ -17,7 +17,7 @@ const finalDate =
   videoDate.getFullYear();
 // console.log(finalDate);
 
-const Video = (props) => {
+const Video = () => {
   return (
     <section className="video">
       <video className="video-hero" controls poster={videoObj.image}></video>
@@ -44,30 +44,12 @@ const Video = (props) => {
             </div>
           </div>
         </div>
-        <div className="video-box video-description">
+        <div className="video-box video-description video-box--borderless">
           <p className="video-description-paragraph">{videoObj.description}</p>
         </div>
       </div>
     </section>
   );
 };
-
-// class Video extends React.Component() {
-//   constructor(props) {
-//     super(props);
-//     this.state = this.props;
-//   }
-
-//   render() {
-//     return (
-//       <div className="videoDiv">
-//         <h1>{this.props.title}</h1>
-//         <video className="video" controls>
-//           <source width="300px" height="200px" src={videoDetails[0].video} />
-//         </video>
-//       </div>
-//     );
-//   }
-// }
 
 export default Video;

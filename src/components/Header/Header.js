@@ -8,7 +8,7 @@ import searchIcon from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className="header">
       <nav className="header-nav">
@@ -27,12 +27,11 @@ const Header = (props) => {
           </div>
           <img src={avatar} alt="avatar" className="header-avatar" />
         </section>
-        {/* <img src={avatar} alt="avatar" className="header-avatar" /> */}
         <section className="header-bottom">
           <img src={uploadIcon} className="header-upload-icon" alt="upload" />
-
           <button className="header-button">UPLOAD</button>
         </section>
+        <img src={avatar} alt="avatar" className="header-avatar-tablet" />
       </nav>
     </header>
   );

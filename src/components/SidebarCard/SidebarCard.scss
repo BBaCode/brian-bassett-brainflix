@@ -21,9 +21,8 @@
   }
   &-video-title {
     color: $black;
-    font-weight: 700;
-    line-height: 16px;
-    padding-bottom: 0.5rem;
+    @include subHeader;
+    padding-bottom: 0.25rem;
   }
   &-channel {
     color: $black;
