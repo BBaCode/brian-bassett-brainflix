@@ -7,9 +7,10 @@ console.log(commentItem);
 
 const commentDate = new Date(commentItem.timestamp);
 const finalDate =
-  commentDate.getDate() +
+  commentDate.getMonth() +
+  1 +
   "/" +
-  (commentDate.getMonth() + 1) +
+  commentDate.getDate() +
   "/" +
   commentDate.getFullYear();
 

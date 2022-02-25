@@ -14,14 +14,30 @@
   &-hero {
     width: 100vw;
     height: auto;
+    @include tablet {
+      width: auto;
+      height: 63vh;
+    }
+    &-box {
+      display: flex;
+      justify-content: center;
+      background-color: $dark-black;
+    }
   }
   &-info {
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
+    @include tablet {
+      margin: 0 2.25rem;
+    }
   }
   &-title {
     padding: 1rem 0;
+    @include tablet {
+      border-bottom: none;
+      padding: 2rem 0 1rem;
+    }
     &-item {
       @include videoTitle;
     }
@@ -30,26 +46,49 @@
     display: flex;
     justify-content: flex-start;
     padding-top: 1rem;
+    @include tablet {
+      justify-content: space-between;
+      padding-top: 0;
+    }
     &-left {
       margin-right: 5rem;
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-right {
+      @include tablet {
+        display: flex;
+      }
     }
     &-header {
-      @include bodyCopy;
+      @include label;
       padding-bottom: 0.5rem;
       color: $silver;
       &--bold {
         @include subHeader;
         color: $black;
+        @include tablet {
+          margin-right: 2.25rem;
+        }
       }
     }
   }
   &-icon-box {
     display: flex;
     align-items: center;
+    @include tablet {
+    }
   }
   &-icon {
     padding-bottom: 0.5rem;
     margin-right: 0.5rem;
+    @include tablet {
+      &--margin-left {
+        margin-left: 2.25rem;
+      }
+    }
   }
   &-description {
     padding: 1rem 0;

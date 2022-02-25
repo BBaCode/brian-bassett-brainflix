@@ -20,7 +20,9 @@ const finalDate =
 const Video = () => {
   return (
     <section className="video">
-      <video className="video-hero" controls poster={videoObj.image}></video>
+      <div className="video-hero-box">
+        <video className="video-hero" controls poster={videoObj.image}></video>
+      </div>
       <div className="video-info">
         <div className="video-box video-title">
           <h2 className="video-title-item">{videoObj.title}</h2>
@@ -39,7 +41,11 @@ const Video = () => {
               <h3 className="video-details-header">{videoObj.views}</h3>
             </div>
             <div className="video-icon-box">
-              <img className="video-icon" src={likesIcon} alt="likes icon" />
+              <img
+                className="video-icon video-icon--margin-left"
+                src={likesIcon}
+                alt="likes icon"
+              />
               <h3 className="video-details-header">{videoObj.likes}</h3>
             </div>
           </div>

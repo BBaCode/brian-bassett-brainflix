@@ -12,7 +12,7 @@ const Comments = () => {
       <div className="comments-container">
         {/* <article class="comments-article"> */}
         <img
-          className="comments-avatar"
+          className="comments-avatar comments-avatar-form"
           alt="man looking to the left"
           src={avatar}
         />
@@ -20,27 +20,33 @@ const Comments = () => {
           <label for="comment" className="comments-label">
             JOIN THE CONVERSATION
           </label>
-          <input
-            type="text"
-            id="comment"
-            name="comment"
-            className="comments-field"
-            placeholder="Add a new comment"
-          />
-          <div className="comments-button-box">
-            <img
-              src={commentIcon}
-              className="comments-icon"
-              alt="comment icon"
+          <div className="comments-form-box">
+            {/* <label for="comment" className="comments-label">
+              JOIN THE CONVERSATION
+            </label> */}
+            <input
+              type="text"
+              id="comment"
+              name="comment"
+              className="comments-field"
+              placeholder="Add a new comment"
             />
-            <button
-              type="submit"
-              id="button"
-              name="button"
-              className="comments-button"
-            >
-              COMMENT
-            </button>
+
+            <div className="comments-button-box">
+              <img
+                src={commentIcon}
+                className="comments-icon"
+                alt="comment icon"
+              />
+              <button
+                type="submit"
+                id="button"
+                name="button"
+                className="comments-button"
+              >
+                COMMENT
+              </button>
+            </div>
           </div>
         </form>
         {/* </article> */}
