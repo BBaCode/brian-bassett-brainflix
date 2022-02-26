@@ -25,6 +25,9 @@
     @include tablet {
       width: 25%;
     }
+    @include desktop {
+      width: 50%;
+    }
   }
   &-video-title {
     color: $black;

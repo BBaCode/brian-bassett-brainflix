@@ -10,10 +10,21 @@
   line-height: 1.125rem;
   color: $dark-black;
   border-bottom: 1px solid $mercury;
+  @include desktop {
+    margin-right: -2.25rem;
+    padding-bottom: 1.5rem;
+  }
   &-right {
     display: flex;
     flex-direction: column;
     margin: 1rem 0 0 1rem;
+    @include tablet {
+      width: 100%;
+    }
+    @include desktop {
+      padding-right: 2.25rem;
+      margin: 1.5rem 0 0 1.5rem;
+    }
     &-top {
       display: flex;
       justify-content: space-between;
@@ -26,5 +37,6 @@
   &-date--color {
     @include label;
     color: $silver;
+    font-family: AvenirNextLTPro-Regular;
   }
 }

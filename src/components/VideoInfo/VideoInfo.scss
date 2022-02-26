@@ -4,33 +4,9 @@
 @import "../../styles/partials/reset";
 
 .video {
-  font-family: AvenirNextLTPro-Regular;
-  &-box {
-    border-bottom: 1px solid $mercury;
-    &--borderless {
-      border-bottom: none;
-    }
-  }
-  &-hero {
-    width: 100vw;
-    height: auto;
-    @include tablet {
-      width: 100%;
-      height: 60vh;
-    }
-    &-box {
-      display: flex;
-      justify-content: center;
-      background-color: $dark-black;
-    }
-  }
-  &-info {
-    margin: 0 1rem;
+  &-title {
     display: flex;
     flex-direction: column;
-    @include tablet {
-      margin: 0 2.25rem;
-    }
   }
   &-title {
     padding: 1rem 0;
@@ -50,6 +26,9 @@
       justify-content: space-between;
       padding-top: 0;
     }
+    @include desktop {
+      margin-right: -2.25rem;
+    }
     &-left {
       margin-right: 5rem;
       @include tablet {
@@ -60,6 +39,9 @@
     &-right {
       @include tablet {
         display: flex;
+      }
+      @include desktop {
+        margin-right: 2.25rem;
       }
     }
     &-header {
@@ -95,6 +77,9 @@
     padding: 1rem 0;
     &-paragraph {
       @include bodyCopy;
+    }
+    @include desktop {
+      padding-top: 1.5rem;
     }
   }
 }

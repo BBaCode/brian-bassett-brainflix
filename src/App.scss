@@ -1,0 +1,19 @@
+@import "./styles/partials/colors";
+@import "./styles/partials/fonts";
+@import "./styles/partials/mixins";
+@import "./styles/partials/reset";
+
+.app-box {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.app-video-comments {
+  @include desktop {
+    border-right: 1px solid $mercury;
+    width: 75%;
+    margin-left: 5rem;
+  }
+}

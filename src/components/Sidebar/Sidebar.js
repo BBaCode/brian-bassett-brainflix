@@ -1,21 +1,25 @@
 import "./Sidebar.scss";
-import videoDetails from "../../data/video-details.json";
 import SidebarCard from "../SidebarCard/SidebarCard";
 
-const video1 = videoDetails[1];
-
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <section className="sidebar">
       <h3 className="sidebar-header">NEXT VIDEOS</h3>
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
-      <SidebarCard />
+      <ul className="sidebar-list"></ul>
+      {props.allVideos
+        .filter((video) => video.id !== props.currentVideo.id)
+        .map((video) => {
+          return (
+            <SidebarCard
+              key={video.id}
+              id={video.id}
+              image={video.image}
+              title={video.title}
+              channel={video.channel}
+              handleVideoChange={props.handleVideoChange}
+            />
+          );
+        })}
     </section>
   );
 };

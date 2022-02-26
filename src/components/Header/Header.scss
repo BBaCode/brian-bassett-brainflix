@@ -5,7 +5,7 @@
 @import "../../styles/partials/reset";
 
 header {
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: AvenirNextLTPro-Regular;
 }
 
 .header {
@@ -27,7 +27,7 @@ header {
     }
   }
   @include desktop {
-    padding: 0 2.25rem;
+    padding: 0 5rem;
   }
   &-top {
     display: flex;
@@ -68,12 +68,17 @@ header {
     padding: 0.75rem;
     @include tablet {
       width: 100%;
+      padding: 0.5rem;
     }
     &-icon {
       padding-right: 0.75rem;
     }
     &-text {
+      @include bodyCopy;
       color: $silver;
+      @include tablet {
+        padding-top: 0.25rem;
+      }
     }
   }
   &-avatar {

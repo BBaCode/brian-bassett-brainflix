@@ -2,15 +2,13 @@ import "./Comments.scss";
 import React from "react";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-import commentDetails from "../../data/video-details.json";
 import CommentCard from "../CommentCard/CommentCard";
 
-const Comments = () => {
+const Comments = (props) => {
   return (
     <section className="comments">
       <h3 className="comments-header">3 Comments</h3>
       <div className="comments-container">
-        {/* <article class="comments-article"> */}
         <img
           className="comments-avatar comments-avatar-form"
           alt="man looking to the left"
@@ -21,9 +19,6 @@ const Comments = () => {
             JOIN THE CONVERSATION
           </label>
           <div className="comments-form-box">
-            {/* <label for="comment" className="comments-label">
-              JOIN THE CONVERSATION
-            </label> */}
             <input
               type="text"
               id="comment"
@@ -51,9 +46,48 @@ const Comments = () => {
         </form>
         {/* </article> */}
       </div>
-      <CommentCard />
-      <CommentCard />
-      <CommentCard />
+      {props.allVideos
+        .filter((video) => video.id === props.currentVideo.id)
+        .map((video) => {
+          return (
+            <CommentCard
+              key={video.id}
+              id={video.id}
+              name={video.comments[0].name}
+              timestamp={video.comments[0].timestamp}
+              comment={video.comments[0].comment}
+              handleVideoChange={props.handleVideoChange}
+            />
+          );
+        })}
+      {props.allVideos
+        .filter((video) => video.id === props.currentVideo.id)
+        .map((video) => {
+          return (
+            <CommentCard
+              key={video.id}
+              id={video.id}
+              name={video.comments[1].name}
+              timestamp={video.comments[1].timestamp}
+              comment={video.comments[1].comment}
+              handleVideoChange={props.handleVideoChange}
+            />
+          );
+        })}
+      {props.allVideos
+        .filter((video) => video.id === props.currentVideo.id)
+        .map((video) => {
+          return (
+            <CommentCard
+              key={video.id}
+              id={video.id}
+              name={video.comments[2].name}
+              timestamp={video.comments[2].timestamp}
+              comment={video.comments[2].comment}
+              handleVideoChange={props.handleVideoChange}
+            />
+          );
+        })}
     </section>
   );
 };
