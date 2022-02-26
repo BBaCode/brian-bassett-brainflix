@@ -1,10 +1,5 @@
-@import "../../styles/partials/colors";
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/reset";
-
+@import "../../styles/partials/global";
 .video {
-  font-family: AvenirNextLTPro-Regular;
   &-box {
     border-bottom: 1px solid $mercury;
     &--borderless {

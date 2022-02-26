@@ -1,27 +1,24 @@
 import "./CommentCard.scss";
-import commentDetails from "../../data/video-details.json";
 import blankAvatar from "../../assets/images/mercury.png";
 
-const CommentCard = (props) => {
-  const commentItem = props.timestamp;
-
+const CommentCard = ({ timestamp, name, comment }) => {
+  const commentItem = timestamp;
   const commentDate = new Date(commentItem);
-  const finalDate =
-    commentDate.getMonth() +
-    1 +
-    "/" +
-    commentDate.getDate() +
-    "/" +
-    commentDate.getFullYear();
+
+  let dd = String(commentDate.getDate()).padStart(2, "0");
+  let mm = String(commentDate.getMonth() + 1).padStart(2, "0");
+  let yyyy = commentDate.getFullYear();
+  let finalDate = mm + "/" + dd + "/" + yyyy;
+
   return (
     <div className="comments-list">
       <img className="comments-avatar" src={blankAvatar} alt="empty profile" />
       <div className="comments-list-right">
         <div className="comments-list-right-top">
-          <h3 className="comments-list-name--bold">{props.name}</h3>
+          <h3 className="comments-list-name--bold">{name}</h3>
           <h4 className="comments-list-date--color">{finalDate}</h4>
         </div>
-        <p>{props.comment}</p>
+        <p>{comment}</p>
       </div>
     </div>
   );

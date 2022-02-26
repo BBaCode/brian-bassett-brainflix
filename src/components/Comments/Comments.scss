@@ -1,7 +1,4 @@
-@import "../../styles/partials/colors";
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/reset";
+@import "../../styles/partials/global";
 
 .comments {
   font-family: AvenirNextLTPro-Regular;
@@ -74,8 +71,12 @@
       color: $black;
       opacity: 1;
     }
+    &:focus {
+      outline: none;
+      border: 1px solid $dark-blue;
+    }
     @include tablet {
-      width: 65%;
+      width: 72%;
       padding: 0.75rem;
       margin: 0 0 1rem;
     }
@@ -83,6 +84,9 @@
   &-button-box {
     position: relative;
     padding-bottom: 1rem;
+    @include tablet {
+      width: 25%;
+    }
     @include desktop {
       margin-right: 2.25rem;
     }

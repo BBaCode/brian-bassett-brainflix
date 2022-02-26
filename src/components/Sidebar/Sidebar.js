@@ -1,13 +1,13 @@
 import "./Sidebar.scss";
 import SidebarCard from "../SidebarCard/SidebarCard";
 
-const Sidebar = (props) => {
+const Sidebar = ({ allVideos, currentVideo, handleVideoChange }) => {
   return (
     <section className="sidebar">
       <h3 className="sidebar-header">NEXT VIDEOS</h3>
       <ul className="sidebar-list"></ul>
-      {props.allVideos
-        .filter((video) => video.id !== props.currentVideo.id)
+      {allVideos
+        .filter((video) => video.id !== currentVideo.id)
         .map((video) => {
           return (
             <SidebarCard
@@ -16,7 +16,7 @@ const Sidebar = (props) => {
               image={video.image}
               title={video.title}
               channel={video.channel}
-              handleVideoChange={props.handleVideoChange}
+              handleVideoChange={handleVideoChange}
             />
           );
         })}

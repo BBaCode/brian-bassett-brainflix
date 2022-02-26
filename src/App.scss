@@ -1,7 +1,8 @@
-@import "./styles/partials/colors";
-@import "./styles/partials/fonts";
-@import "./styles/partials/mixins";
-@import "./styles/partials/reset";
+@import "./styles/partials/global";
+
+body {
+  font-family: AvenirNextLTPro-Regular;
+}
 
 .app-box {
   @include desktop {

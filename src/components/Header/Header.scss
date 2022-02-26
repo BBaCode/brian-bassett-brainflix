@@ -1,8 +1,4 @@
-// @import "../../styles/global"; fix somehow
-@import "../../styles/partials/colors";
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/reset";
+@import "../../styles/partials/global";
 
 header {
   font-family: AvenirNextLTPro-Regular;
@@ -91,9 +87,6 @@ header {
       @include tablet {
         @include avatar;
         display: inline;
-        // position: absolute;
-        // top: 0.52rem;
-        // right: 0.5rem;
       }
     }
   }

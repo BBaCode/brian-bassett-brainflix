@@ -4,7 +4,7 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 import CommentCard from "../CommentCard/CommentCard";
 
-const Comments = (props) => {
+const Comments = ({ allVideos, currentVideo, handleVideoChange }) => {
   return (
     <section className="comments">
       <h3 className="comments-header">3 Comments</h3>
@@ -44,10 +44,9 @@ const Comments = (props) => {
             </div>
           </div>
         </form>
-        {/* </article> */}
       </div>
-      {props.allVideos
-        .filter((video) => video.id === props.currentVideo.id)
+      {allVideos
+        .filter((video) => video.id === currentVideo.id)
         .map((video) => {
           return (
             <CommentCard
@@ -56,12 +55,12 @@ const Comments = (props) => {
               name={video.comments[0].name}
               timestamp={video.comments[0].timestamp}
               comment={video.comments[0].comment}
-              handleVideoChange={props.handleVideoChange}
+              handleVideoChange={handleVideoChange}
             />
           );
         })}
-      {props.allVideos
-        .filter((video) => video.id === props.currentVideo.id)
+      {allVideos
+        .filter((video) => video.id === currentVideo.id)
         .map((video) => {
           return (
             <CommentCard
@@ -70,12 +69,12 @@ const Comments = (props) => {
               name={video.comments[1].name}
               timestamp={video.comments[1].timestamp}
               comment={video.comments[1].comment}
-              handleVideoChange={props.handleVideoChange}
+              handleVideoChange={handleVideoChange}
             />
           );
         })}
-      {props.allVideos
-        .filter((video) => video.id === props.currentVideo.id)
+      {allVideos
+        .filter((video) => video.id === currentVideo.id)
         .map((video) => {
           return (
             <CommentCard
@@ -84,7 +83,7 @@ const Comments = (props) => {
               name={video.comments[2].name}
               timestamp={video.comments[2].timestamp}
               comment={video.comments[2].comment}
-              handleVideoChange={props.handleVideoChange}
+              handleVideoChange={handleVideoChange}
             />
           );
         })}
