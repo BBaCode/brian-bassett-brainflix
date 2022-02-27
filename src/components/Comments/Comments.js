@@ -45,48 +45,18 @@ const Comments = ({ allVideos, currentVideo, handleVideoChange }) => {
           </div>
         </form>
       </div>
-      {allVideos
-        .filter((video) => video.id === currentVideo.id)
-        .map((video) => {
-          return (
-            <CommentCard
-              key={video.id}
-              id={video.id}
-              name={video.comments[0].name}
-              timestamp={video.comments[0].timestamp}
-              comment={video.comments[0].comment}
-              handleVideoChange={handleVideoChange}
-            />
-          );
-        })}
-      {allVideos
-        .filter((video) => video.id === currentVideo.id)
-        .map((video) => {
-          return (
-            <CommentCard
-              key={video.id}
-              id={video.id}
-              name={video.comments[1].name}
-              timestamp={video.comments[1].timestamp}
-              comment={video.comments[1].comment}
-              handleVideoChange={handleVideoChange}
-            />
-          );
-        })}
-      {allVideos
-        .filter((video) => video.id === currentVideo.id)
-        .map((video) => {
-          return (
-            <CommentCard
-              key={video.id}
-              id={video.id}
-              name={video.comments[2].name}
-              timestamp={video.comments[2].timestamp}
-              comment={video.comments[2].comment}
-              handleVideoChange={handleVideoChange}
-            />
-          );
-        })}
+      {currentVideo.comments.map((comment) => {
+        return (
+          <CommentCard
+            key={comment.id}
+            id={comment.id}
+            name={comment.name}
+            timestamp={comment.timestamp}
+            comment={comment.comment}
+            handleVideoChange={handleVideoChange}
+          />
+        );
+      })}
     </section>
   );
 };
