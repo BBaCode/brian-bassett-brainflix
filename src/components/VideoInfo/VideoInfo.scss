@@ -1,9 +1,13 @@
 @import "../../styles/partials/global";
 
 .video {
-  &__title {
+  &__info {
     display: flex;
     flex-direction: column;
+    padding: 0 1rem;
+    @include tablet {
+      padding: 0 2.25rem;
+    }
   }
   &__title {
     padding: 1rem 0;
@@ -44,11 +48,11 @@
     &-header {
       @include label;
       padding-bottom: 0.5rem;
-      color: $silver;
-      font-family: AvenirNextLTPro-Regular;
+      color: $secondary-text-color;
+      font-weight: 400;
       &--bold {
         @include subHeader;
-        color: $black;
+        color: $primary-text;
         @include tablet {
           margin-right: 2.25rem;
         }

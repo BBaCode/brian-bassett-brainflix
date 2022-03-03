@@ -27,11 +27,11 @@
     }
   }
   &-video-title {
-    color: $black;
+    color: $primary-text;
     @include subHeader;
     padding-bottom: 0.25rem;
   }
   &-channel {
-    color: $black;
+    color: $primary-text;
   }
 }

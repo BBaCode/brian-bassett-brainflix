@@ -1,7 +1,7 @@
 @import "../../styles/partials/global";
 .video {
   &-box {
-    border-bottom: 1px solid $mercury;
+    border-bottom: $divider;
     &--borderless {
       border-bottom: none;
     }
@@ -16,7 +16,7 @@
     &-box {
       display: flex;
       justify-content: center;
-      background-color: $dark-black;
+      background-color: $video-player-black;
     }
   }
   &-info {
@@ -60,11 +60,10 @@
     &-header {
       @include label;
       padding-bottom: 0.5rem;
-      color: $silver;
-      font-family: AvenirNextLTPro-Regular;
+      color: $secondary-text-color;
       &--bold {
         @include subHeader;
-        color: $black;
+        color: $primary-text;
         @include tablet {
           margin-right: 2.25rem;
         }

@@ -1,9 +1,5 @@
 @import "../../styles/partials/global";
 
-header {
-  font-family: AvenirNextLTPro-Regular;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -55,12 +51,12 @@ header {
   }
   &__search {
     display: flex;
-    background-color: $alabaster;
+    background-color: $form-field-background;
     justify-content: flex-start;
     align-items: center;
     width: 85%;
     border-radius: 4px;
-    border: 1px $mercury solid;
+    border: $divider;
     padding: 0.75rem;
     @include tablet {
       width: 100%;
@@ -71,7 +67,7 @@ header {
     }
     &-text {
       @include bodyCopy;
-      color: $silver;
+      color: $secondary-text-color;
       @include tablet {
         padding-top: 0.25rem;
       }

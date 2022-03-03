@@ -1,9 +1,5 @@
 @import "../../styles/partials/global";
 
-body {
-  font-family: AvenirNextLTPro-Regular;
-}
-
 .div-box {
   @include desktop {
     display: flex;
@@ -13,7 +9,7 @@ body {
 
 .div__video-comments {
   @include desktop {
-    border-right: 1px solid $mercury;
+    border-right: $divider;
     width: 75%;
     margin-left: 5rem;
   }
