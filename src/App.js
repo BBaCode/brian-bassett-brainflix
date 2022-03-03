@@ -1,6 +1,5 @@
-import "./App.css";
 import "./App.scss";
-import Header from "./components/Header/Header";
+import PageHeader from "./components/PageHeader/PageHeader";
 import Video from "./components/Video/Video";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
 import Comments from "./components/Comments/Comments";
@@ -24,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <PageHeader />
         <Video
           allVideos={this.state.allVideos}
           currentVideo={this.state.currentVideo}

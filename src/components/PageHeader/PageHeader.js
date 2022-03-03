@@ -2,13 +2,13 @@
 // div - logo and header for BrainFlix
 // div search bar and avatar
 // button and absolute image
-import "./Header.scss";
+import "./PageHeader.scss";
 import logo from "../../assets/logos/BrainFlix-logo.svg";
 import searchIcon from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 
-const Header = () => {
+const PageHeader = () => {
   return (
     <header className="header">
       <nav className="header-nav">
@@ -37,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default PageHeader;
