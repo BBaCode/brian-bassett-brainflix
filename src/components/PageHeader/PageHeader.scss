@@ -12,7 +12,7 @@ header {
   margin: 0 1rem;
   @include tablet {
     margin: 0 2.25rem;
-    &-nav {
+    &__nav {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -25,7 +25,7 @@ header {
   @include desktop {
     padding: 0 5rem;
   }
-  &-top {
+  &__top {
     display: flex;
     justify-content: center;
     @include tablet {
@@ -36,10 +36,10 @@ header {
       width: 50%;
     }
   }
-  &-logo {
+  &__logo {
     padding: 1rem 0;
   }
-  &-middle {
+  &__middle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,7 +53,7 @@ header {
       width: 26%;
     }
   }
-  &-search {
+  &__search {
     display: flex;
     background-color: $alabaster;
     justify-content: flex-start;
@@ -77,7 +77,7 @@ header {
       }
     }
   }
-  &-avatar {
+  &__avatar {
     @include avatar;
     @include tablet {
       display: none;
@@ -90,7 +90,7 @@ header {
       }
     }
   }
-  &-bottom {
+  &__bottom {
     position: relative;
     padding-bottom: 1rem;
     @include tablet {
@@ -98,7 +98,7 @@ header {
       margin-right: 1.5rem;
     }
   }
-  &-upload-icon {
+  &__upload-icon {
     position: absolute;
     top: 0.5rem;
     left: 0.75rem;
@@ -107,7 +107,7 @@ header {
       left: 0.3rem;
     }
   }
-  &-button {
+  &__button {
     @include label;
     @include button;
   }

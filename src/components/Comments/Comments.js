@@ -4,40 +4,39 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 import CommentCard from "../CommentCard/CommentCard";
 
-const Comments = ({ allVideos, currentVideo, handleVideoChange }) => {
+const Comments = ({ currentVideo, handleVideoChange }) => {
   return (
     <section className="comments">
-      <h3 className="comments-header">3 Comments</h3>
-      <div className="comments-container">
+      <h3 className="comments__header">3 Comments</h3>
+      <div className="comments__container">
         <img
-          className="comments-avatar comments-avatar-form"
+          className="comments__avatar comments__avatar-form"
           alt="man looking to the left"
           src={avatar}
         />
-        <form id="form" className="comments-form">
-          <label for="comment" className="comments-label">
+        <form id="form" className="comments__form">
+          <label for="comment" className="comments__label">
             JOIN THE CONVERSATION
           </label>
-          <div className="comments-form-box">
+          <div className="comments__form-box">
             <input
               type="text"
               id="comment"
               name="comment"
-              className="comments-field"
+              className="comments__field"
               placeholder="Add a new comment"
             />
-
-            <div className="comments-button-box">
+            <div className="comments__button-box">
               <img
                 src={commentIcon}
-                className="comments-icon"
+                className="comments__icon"
                 alt="comment icon"
               />
               <button
                 type="submit"
                 id="button"
                 name="button"
-                className="comments-button"
+                className="comments__button"
               >
                 COMMENT
               </button>

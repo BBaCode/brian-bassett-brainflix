@@ -1,4 +1,6 @@
 import React from "react";
+import "./Upload.scss";
+import previewImage from "../../assets/images/Upload-video-preview.jpg";
 
 const Upload = () => {
   return (
@@ -7,22 +9,26 @@ const Upload = () => {
       <section className="upload__top-box">
         <div className="upload__video-box">
           <h3 className="upload__video-title">VIDEO THUMBNAIL</h3>
-          <div className="upload__video-thumb"></div>
+          <img
+            src={previewImage}
+            className="upload__video-thumb"
+            alt="thumbnail"
+          />
         </div>
         <form className="upload__form">
-          <label for="title" className="upload__form-title">
+          <label for="title" className="upload__form-label">
             TITLE YOUR VIDEO
           </label>
           <input
-            className="upload__form-title-input"
+            className="upload__form-input upload__form-input--title"
             name="title"
             placeholder="Add a title to your video"
           ></input>
-          <label for="description" className="upload__form-description">
+          <label for="description" className="upload__form-label">
             ADD A VIDEO DESCRIPTION
           </label>
           <input
-            className="upload__form-description-input"
+            className="upload__form-input upload__form-input--description"
             name="description"
             placeholder="Add a description of your video"
           ></input>

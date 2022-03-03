@@ -1,11 +1,11 @@
 @import "../../styles/partials/global";
 
 .video {
-  &-title {
+  &__title {
     display: flex;
     flex-direction: column;
   }
-  &-title {
+  &__title {
     padding: 1rem 0;
     @include tablet {
       border-bottom: none;
@@ -15,7 +15,7 @@
       @include videoTitle;
     }
   }
-  &-details {
+  &__details {
     display: flex;
     justify-content: flex-start;
     padding-top: 1rem;
@@ -55,13 +55,13 @@
       }
     }
   }
-  &-icon-box {
+  &__icon-box {
     display: flex;
     align-items: center;
     @include tablet {
     }
   }
-  &-icon {
+  &__icon {
     padding-bottom: 0.5rem;
     margin-right: 0.5rem;
     @include tablet {
@@ -70,7 +70,7 @@
       }
     }
   }
-  &-description {
+  &__description {
     padding: 1rem 0;
     &-paragraph {
       @include bodyCopy;

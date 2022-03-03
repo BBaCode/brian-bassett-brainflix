@@ -1,32 +1,23 @@
 import "./App.scss";
 import PageHeader from "./components/PageHeader/PageHeader";
-import Video from "./components/Video/Video";
-import VideoInfo from "./components/VideoInfo/VideoInfo";
-import Comments from "./components/Comments/Comments";
-import Sidebar from "./components/Sidebar/Sidebar";
 import React from "react";
-import videoDetails from "./data/video-details.json";
 import HomePage from "./components/HomePage/HomePage";
+import Upload from "./components/Upload/Upload";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
-  state = {
-    allVideos: videoDetails,
-    currentVideo: videoDetails[0],
-  };
-
-  handleVideoChange = (id) => {
-    const newVideoId = this.state.allVideos.findIndex(
-      (video) => id === video.id
-    );
-    this.setState({ currentVideo: this.state.allVideos[newVideoId] });
-  };
-
   render() {
     return (
       <div>
-        <PageHeader />
+        <BrowserRouter>
+          <PageHeader />
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            {/* <Route />  this will be to change what shows up */}
 
-        <HomePage />
+            <Route path="/upload" exact component={Upload} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }

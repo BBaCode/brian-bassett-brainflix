@@ -1,0 +1,20 @@
+@import "../../styles/partials/global";
+
+body {
+  font-family: AvenirNextLTPro-Regular;
+}
+
+.div-box {
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.div__video-comments {
+  @include desktop {
+    border-right: 1px solid $mercury;
+    width: 75%;
+    margin-left: 5rem;
+  }
+}

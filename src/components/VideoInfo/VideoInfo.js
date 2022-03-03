@@ -17,35 +17,39 @@ const VideoInfo = (props) => {
     commentDate.getFullYear();
 
   return (
-    <div className="video-info">
-      <div className="video-box video-title">
-        <h1 className="video-title-item">{props.currentVideo.title}</h1>
+    <div className="video__info">
+      <div className="video__box video__title">
+        <h1 className="video__title-item">{props.currentVideo.title}</h1>
       </div>
-      <div className="video-box video-details">
+      <div className="video__box video__details">
         {/* container for all info under Video title */}
-        <div className="video-details-left">
-          <h3 className="video-details-header video-details-header--bold">
+        <div className="video__details-left">
+          <h3 className="video__details-header video__details-header--bold">
             By {props.currentVideo.channel}
           </h3>
-          <h3 className="video-details-header">{finalDate}</h3>
+          <h3 className="video__details-header">{finalDate}</h3>
         </div>
-        <div className="video-details-right">
-          <div className="video-icon-box">
-            <img className="video-icon" src={viewsIcon} alt="views icon" />
-            <h3 className="video-details-header">{props.currentVideo.views}</h3>
+        <div className="video__details-right">
+          <div className="video__icon-box">
+            <img className="video__icon" src={viewsIcon} alt="views icon" />
+            <h3 className="video__details-header">
+              {props.currentVideo.views}
+            </h3>
           </div>
-          <div className="video-icon-box">
+          <div className="video__icon-box">
             <img
-              className="video-icon video-icon--margin-left"
+              className="video__icon video__icon--margin-left"
               src={likesIcon}
               alt="likes icon"
             />
-            <h3 className="video-details-header">{props.currentVideo.likes}</h3>
+            <h3 className="video__details-header">
+              {props.currentVideo.likes}
+            </h3>
           </div>
         </div>
       </div>
-      <div className="video-box video-description video-box--borderless">
-        <p className="video-description-paragraph">
+      <div className="video__box video__description video__box--borderless">
+        <p className="video__description-paragraph">
           {props.currentVideo.description}
         </p>
       </div>

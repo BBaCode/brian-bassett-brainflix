@@ -6,14 +6,14 @@
   @include tablet {
     margin: 0 2.25rem;
   }
-  &-header {
+  &__header {
     padding: 0 0 1rem;
     @include subHeader;
     @include desktop {
       padding: 2rem 0 0;
     }
   }
-  &-container {
+  &__container {
     display: flex;
     justify-content: flex-start;
     border-bottom: 1px solid $mercury;
@@ -21,7 +21,7 @@
       margin-right: -2.25rem;
     }
   }
-  &-avatar {
+  &__avatar {
     @include avatar;
     margin-top: 1rem;
     @include desktop {
@@ -36,7 +36,7 @@
       }
     }
   }
-  &-form {
+  &__form {
     width: 90%;
     padding-left: 1rem;
     @include tablet {
@@ -54,12 +54,12 @@
       }
     }
   }
-  &-label {
+  &__label {
     color: $silver;
     @include label;
     font-family: AvenirNextLTPro-Regular;
   }
-  &-field {
+  &__field {
     width: 100%;
     padding: 0.75rem 0.75rem 5rem;
     margin: 0.25rem 0 1rem 0;
@@ -81,7 +81,7 @@
       margin: 0 0 1rem;
     }
   }
-  &-button-box {
+  &__button-box {
     position: relative;
     padding-bottom: 1rem;
     @include tablet {
@@ -91,12 +91,12 @@
       margin-right: 2.25rem;
     }
   }
-  &-icon {
+  &__icon {
     position: absolute;
     top: 0.5625rem;
     left: 0.75rem;
   }
-  &-button {
+  &__button {
     @include label;
     @include button;
   }

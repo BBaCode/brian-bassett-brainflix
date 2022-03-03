@@ -4,6 +4,7 @@ import Comments from "../Comments/Comments";
 import Sidebar from "../Sidebar/Sidebar";
 import React from "react";
 import videoDetails from "../../data/video-details.json";
+import "./HomePage.scss";
 
 class HomePage extends React.Component {
   state = {
@@ -25,8 +26,8 @@ class HomePage extends React.Component {
           allVideos={this.state.allVideos}
           currentVideo={this.state.currentVideo}
         />
-        <div className="app-box">
-          <div className="app-video-comments">
+        <div className="div-box">
+          <div className="div__video-comments">
             <VideoInfo
               allVideos={this.state.allVideos}
               currentVideo={this.state.currentVideo}
