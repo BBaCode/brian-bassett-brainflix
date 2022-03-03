@@ -6,6 +6,7 @@ import Comments from "./components/Comments/Comments";
 import Sidebar from "./components/Sidebar/Sidebar";
 import React from "react";
 import videoDetails from "./data/video-details.json";
+import HomePage from "./components/HomePage/HomePage";
 
 class App extends React.Component {
   state = {
@@ -24,27 +25,8 @@ class App extends React.Component {
     return (
       <div>
         <PageHeader />
-        <Video
-          allVideos={this.state.allVideos}
-          currentVideo={this.state.currentVideo}
-        />
-        <div className="app-box">
-          <div className="app-video-comments">
-            <VideoInfo
-              allVideos={this.state.allVideos}
-              currentVideo={this.state.currentVideo}
-            />
-            <Comments
-              allVideos={this.state.allVideos}
-              currentVideo={this.state.currentVideo}
-            />
-          </div>
-          <Sidebar
-            allVideos={this.state.allVideos}
-            currentVideo={this.state.currentVideo}
-            handleVideoChange={this.handleVideoChange}
-          />
-        </div>
+
+        <HomePage />
       </div>
     );
   }
