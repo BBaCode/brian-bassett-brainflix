@@ -44,7 +44,9 @@ const Upload = () => {
           />
           <button className="upload__button--publish">PUBLISH</button>
         </div>
-        <button className="upload__button--cancel">CANCEL</button>
+        <div className="upload__button--bottom">
+          <button className="upload__button--cancel">CANCEL</button>
+        </div>
       </section>
     </div>
   );
