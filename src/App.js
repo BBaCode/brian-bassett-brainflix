@@ -13,7 +13,12 @@ class App extends React.Component {
           <PageHeader />
           <Switch>
             <Route path="/" exact component={HomePage} />
-            {/* <Route />  this will be to change what shows up */}
+            <Route
+              path="/video/:id"
+              render={(props) => {
+                return <HomePage {...props} />;
+              }}
+            />
 
             <Route path="/upload" exact component={Upload} />
           </Switch>
