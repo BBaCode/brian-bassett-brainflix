@@ -9,6 +9,7 @@
       padding: 0 2.25rem;
     }
   }
+
   &__title {
     padding: 1rem 0;
     @include tablet {
@@ -19,6 +20,7 @@
       @include videoTitle;
     }
   }
+
   &__details {
     display: flex;
     justify-content: flex-start;
@@ -59,12 +61,14 @@
       }
     }
   }
+
   &__icon-box {
     display: flex;
     align-items: center;
     @include tablet {
     }
   }
+
   &__icon {
     padding-bottom: 0.5rem;
     margin-right: 0.5rem;
@@ -74,6 +78,7 @@
       }
     }
   }
+
   &__description {
     padding: 1rem 0;
     &-paragraph {

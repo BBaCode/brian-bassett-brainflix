@@ -21,6 +21,7 @@
   @include desktop {
     padding: 0 5rem;
   }
+
   &__top {
     display: flex;
     justify-content: center;
@@ -32,9 +33,11 @@
       width: 50%;
     }
   }
+
   &__logo {
     padding: 1rem 0;
   }
+
   &__middle {
     display: flex;
     align-items: center;
@@ -49,6 +52,7 @@
       width: 26%;
     }
   }
+
   &__search {
     display: flex;
     background-color: $form-field-background;
@@ -68,11 +72,14 @@
     &-text {
       @include bodyCopy;
       color: $secondary-text-color;
+      width: 100%;
+      border: none;
       @include tablet {
         padding-top: 0.25rem;
       }
     }
   }
+
   &__avatar {
     @include avatar;
     @include tablet {
@@ -86,6 +93,7 @@
       }
     }
   }
+
   &__bottom {
     position: relative;
     padding-bottom: 1rem;
@@ -94,6 +102,7 @@
       margin-right: 1.5rem;
     }
   }
+
   &__upload-icon {
     position: absolute;
     top: 0.5rem;
@@ -103,6 +112,7 @@
       left: 0.3rem;
     }
   }
+
   &__button {
     @include label;
     @include button;

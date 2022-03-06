@@ -6,6 +6,7 @@
   @include tablet {
     padding-bottom: 1.25rem;
   }
+
   &-image {
     height: 3.4375rem;
     width: 5.9375rem;
@@ -15,6 +16,7 @@
       width: 6.5rem;
     }
   }
+
   &-box {
     display: flex;
     flex-direction: column;
@@ -26,11 +28,13 @@
       width: 50%;
     }
   }
+
   &-video-title {
     color: $primary-text;
     @include subHeader;
     padding-bottom: 0.25rem;
   }
+
   &-channel {
     color: $primary-text;
   }

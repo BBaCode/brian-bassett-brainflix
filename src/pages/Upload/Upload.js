@@ -2,6 +2,7 @@ import React from "react";
 import "./Upload.scss";
 import previewImage from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
+import { Link } from "react-router-dom";
 
 const Upload = () => {
   return (
@@ -36,14 +37,21 @@ const Upload = () => {
         </form>
       </section>
       <section className="upload__button-box">
-        <div className="upload__button--top">
-          <img
-            className="upload__button--icon"
-            src={publishIcon}
-            alt="publish"
-          />
-          <button className="upload__button--publish">PUBLISH</button>
-        </div>
+        <Link
+          to="/"
+          onClick={() => {
+            alert("Video Uploaded!");
+          }}
+        >
+          <div className="upload__button--top">
+            <img
+              className="upload__button--icon"
+              src={publishIcon}
+              alt="publish"
+            />
+            <button className="upload__button--publish">PUBLISH</button>
+          </div>
+        </Link>
         <div className="upload__button--bottom">
           <button className="upload__button--cancel">CANCEL</button>
         </div>

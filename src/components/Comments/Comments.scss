@@ -5,6 +5,7 @@
   @include tablet {
     margin: 0 2.25rem;
   }
+
   &__header {
     padding: 0 0 1rem;
     @include subHeader;
@@ -12,6 +13,7 @@
       padding: 2rem 0 0;
     }
   }
+
   &__container {
     display: flex;
     justify-content: flex-start;
@@ -20,6 +22,7 @@
       margin-right: -2.25rem;
     }
   }
+
   &__avatar {
     @include avatar;
     margin-top: 1rem;
@@ -35,6 +38,7 @@
       }
     }
   }
+
   &__form {
     width: 90%;
     padding-left: 1rem;
@@ -53,10 +57,12 @@
       }
     }
   }
+
   &__label {
     color: $secondary-text-color;
     @include label;
   }
+
   &__field {
     width: 100%;
     padding: 0.75rem 0.75rem 5rem;
@@ -82,6 +88,7 @@
       width: 65%;
     }
   }
+
   &__button-box {
     position: relative;
     padding-bottom: 1rem;
@@ -92,11 +99,13 @@
       margin-right: 2.25rem;
     }
   }
+
   &__icon {
     position: absolute;
     top: 0.5625rem;
     left: 0.75rem;
   }
+
   &__button {
     @include label;
     @include button;

@@ -6,6 +6,7 @@
       border-bottom: none;
     }
   }
+
   &-hero {
     width: 100vw;
     height: auto;
@@ -19,6 +20,7 @@
       background-color: $video-player-black;
     }
   }
+
   &-info {
     margin: 0 1rem;
     display: flex;
@@ -27,6 +29,7 @@
       margin: 0 2.25rem;
     }
   }
+
   &-title {
     padding: 1rem 0;
     @include tablet {
@@ -37,6 +40,7 @@
       @include videoTitle;
     }
   }
+
   &-details {
     display: flex;
     justify-content: flex-start;
@@ -70,12 +74,14 @@
       }
     }
   }
+
   &-icon-box {
     display: flex;
     align-items: center;
     @include tablet {
     }
   }
+
   &-icon {
     padding-bottom: 0.5rem;
     margin-right: 0.5rem;
@@ -85,6 +91,7 @@
       }
     }
   }
+
   &-description {
     padding: 1rem 0;
     &-paragraph {
