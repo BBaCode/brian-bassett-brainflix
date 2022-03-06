@@ -4,9 +4,9 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 import CommentCard from "../CommentCard/CommentCard";
 
-const Comments = ({ currentVideo, handleVideoChange }) => {
+const Comments = ({ comments }) => {
   return (
-    <section className="comments">
+    <div className="comments">
       <h3 className="comments__header">3 Comments</h3>
       <div className="comments__container">
         <img
@@ -44,7 +44,7 @@ const Comments = ({ currentVideo, handleVideoChange }) => {
           </div>
         </form>
       </div>
-      {currentVideo.comments.map((comment) => {
+      {comments.map((comment) => {
         return (
           <CommentCard
             key={comment.id}
@@ -52,11 +52,10 @@ const Comments = ({ currentVideo, handleVideoChange }) => {
             name={comment.name}
             timestamp={comment.timestamp}
             comment={comment.comment}
-            handleVideoChange={handleVideoChange}
           />
         );
       })}
-    </section>
+    </div>
   );
 };
 

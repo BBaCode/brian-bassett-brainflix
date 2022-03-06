@@ -1,7 +1,7 @@
 import "./Sidebar.scss";
 import SidebarCard from "../SidebarCard/SidebarCard";
 
-const Sidebar = ({ allVideos, currentVideo, handleVideoChange }) => {
+const Sidebar = ({ allVideos, currentVideo }) => {
   return (
     <section className="sidebar">
       <h3 className="sidebar__header">NEXT VIDEOS</h3>
@@ -16,7 +16,6 @@ const Sidebar = ({ allVideos, currentVideo, handleVideoChange }) => {
               image={video.image}
               title={video.title}
               channel={video.channel}
-              handleVideoChange={handleVideoChange}
             />
           );
         })}
