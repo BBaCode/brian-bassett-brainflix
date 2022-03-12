@@ -1,6 +1,7 @@
-@import "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.comments__list {
+.commentcard {
   display: flex;
   padding-bottom: 1rem;
   font-size: 13px;
@@ -12,7 +13,7 @@
     padding-bottom: 1.5rem;
   }
 
-  &-right {
+  &__right {
     display: flex;
     flex-direction: column;
     margin: 1rem 0 0 1rem;
@@ -23,18 +24,19 @@
       padding-right: 2.25rem;
       margin: 1.5rem 0 0 1.5rem;
     }
-    &-top {
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0.5rem;
-    }
   }
 
-  &-name--bold {
+  &__right-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+  }
+
+  &__name--bold {
     @include subHeader;
   }
 
-  &-date--color {
+  &__date--color {
     @include label;
     color: $secondary-text-color;
     font-weight: 400;

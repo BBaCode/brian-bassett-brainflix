@@ -11,12 +11,12 @@ const CommentCard = ({ timestamp, name, comment }) => {
   let finalDate = mm + "/" + dd + "/" + yyyy;
 
   return (
-    <div className="comments__list">
+    <div className="commentcard">
       <img className="comments__avatar" src={blankAvatar} alt="empty profile" />
-      <div className="comments__list-right">
-        <div className="comments__list-right-top">
-          <h3 className="comments__list-name--bold">{name}</h3>
-          <h4 className="comments__list-date--color">{finalDate}</h4>
+      <div className="commentcard__right">
+        <div className="commentcard__right-top">
+          <h3 className="commentcard__name--bold">{name}</h3>
+          <h4 className="commentcard__date--color">{finalDate}</h4>
         </div>
         <p>{comment}</p>
       </div>

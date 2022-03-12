@@ -1,4 +1,5 @@
-@import "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .upload {
   padding: 1.5rem;
@@ -59,7 +60,7 @@
     flex-direction: column;
     @include tablet {
       padding-bottom: 1rem;
-      border-bottom: $divider;
+      // border-bottom: $divider;
     }
     @include desktop {
       margin-left: 2rem;
@@ -67,81 +68,95 @@
       border-bottom: none;
       width: 68%;
     }
-    &-label {
-      color: $secondary-text-color;
-      @include label;
-      padding-top: 1rem;
-      @include desktop {
-        padding-top: 0;
-      }
+  }
+
+  &__form-label {
+    color: $secondary-text-color;
+    @include label;
+    padding-top: 1rem;
+    @include desktop {
+      padding-top: 0;
     }
-    &-input {
+  }
+
+  &__form-input {
+    width: 100%;
+    border-radius: 4px;
+    border: $divider;
+    background-color: $form-field-background;
+    color: $primary-text;
+    margin: 0.25rem 0 1rem 0;
+    @include tablet {
       width: 100%;
-      border-radius: 4px;
-      border: $divider;
-      background-color: $form-field-background;
-      color: $primary-text;
-      margin: 0.25rem 0 1rem 0;
-      @include tablet {
-        width: 100%;
-      }
-      &::placeholder {
-        color: $primary-text;
-        opacity: 1;
-      }
-      &:focus {
-        outline: none;
-        border: 1px solid $primary-CTA;
-      }
-      &--title {
-        padding: 0.75rem 0.75rem 0.75rem;
-      }
-      &--description {
-        padding: 0.75rem 0.75rem 5rem;
-      }
     }
+    &::placeholder {
+      color: $primary-text;
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-CTA;
+    }
+  }
+
+  &__form-input-title {
+    padding: 0.75rem 0.75rem 0.75rem;
+  }
+  &__form-input-description {
+    padding: 0.75rem 0.75rem 5rem;
   }
 
   &__button-box {
     display: flex;
     flex-direction: column;
     @include tablet {
-      padding-top: 2rem;
       flex-direction: row;
       position: relative;
+      border-top: $divider;
+      height: 2rem;
     }
   }
 
-  &__button--top {
+  &__button-top {
     position: relative;
     margin-bottom: 1rem;
     @include tablet {
       position: absolute;
       right: 0;
-      top: 2rem;
+      top: 1rem;
     }
   }
 
-  &__button--publish {
+  &__button-submit {
+    position: relative;
+    margin-bottom: 1rem;
+    @include tablet {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
+  }
+
+  &__button-publish {
     @include button;
   }
 
-  &__button--icon {
+  &__button-icon {
     position: absolute;
     top: 0.63rem;
     left: 0.4rem;
   }
 
-  &__button--bottom {
+  &__button-bottom {
     position: relative;
     @include tablet {
       position: absolute;
-      top: 2rem;
+      top: 1rem;
       right: 13rem;
     }
   }
 
-  &__button--cancel {
+  &__button-cancel {
     @include button;
     background-color: $cta-text;
     color: $primary-CTA;

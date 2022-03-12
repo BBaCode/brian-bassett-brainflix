@@ -1,4 +1,5 @@
-@import "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .header {
   display: flex;
@@ -66,17 +67,19 @@
       width: 100%;
       padding: 0.5rem;
     }
-    &-icon {
-      padding-right: 0.75rem;
-    }
-    &-text {
-      @include bodyCopy;
-      color: $secondary-text-color;
-      width: 100%;
-      border: none;
-      @include tablet {
-        padding-top: 0.25rem;
-      }
+  }
+
+  &__search-icon {
+    padding-right: 0.75rem;
+  }
+
+  &__search-text {
+    @include bodyCopy;
+    color: $secondary-text-color;
+    width: 100%;
+    border: none;
+    @include tablet {
+      padding-top: 0.25rem;
     }
   }
 
@@ -85,12 +88,13 @@
     @include tablet {
       display: none;
     }
-    &-tablet {
-      display: none;
-      @include tablet {
-        @include avatar;
-        display: inline;
-      }
+  }
+
+  &__avatar-tablet {
+    display: none;
+    @include tablet {
+      @include avatar;
+      display: inline;
     }
   }
 

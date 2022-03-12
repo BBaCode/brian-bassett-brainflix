@@ -1,5 +1,7 @@
-@import "./styles/partials/global";
+@use "./styles/partials/reset";
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/global";
 
-.app {
-  font-family: "Avenir";
-}
+// .app {
+//   font-family: "Avenir";
+// }

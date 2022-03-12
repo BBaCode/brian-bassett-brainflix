@@ -1,13 +1,14 @@
-@import "../../styles/partials/global";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
-.sidebar__card {
+.sidebarcard {
   display: flex;
   padding-bottom: 1rem;
   @include tablet {
     padding-bottom: 1.25rem;
   }
 
-  &-image {
+  &__image {
     height: 3.4375rem;
     width: 5.9375rem;
     border-radius: 4px;
@@ -17,7 +18,7 @@
     }
   }
 
-  &-box {
+  &__box {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
@@ -29,13 +30,13 @@
     }
   }
 
-  &-video-title {
+  &__video-title {
     color: $primary-text;
     @include subHeader;
     padding-bottom: 0.25rem;
   }
 
-  &-channel {
+  &__channel {
     color: $primary-text;
   }
 }

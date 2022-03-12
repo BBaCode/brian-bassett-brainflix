@@ -1,5 +1,5 @@
-@import "../../styles/partials/global";
-
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .div-box {
   @include desktop {
     display: flex;

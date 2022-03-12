@@ -4,9 +4,9 @@ import React from "react";
 const Video = ({ currentVideo }) => {
   return (
     <section className="video">
-      <div className="video-hero-box">
+      <div className="video__hero-box">
         <video
-          className="video-hero"
+          className="video__hero"
           controls
           poster={currentVideo.image}
         ></video>

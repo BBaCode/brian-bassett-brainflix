@@ -32,9 +32,10 @@ class HomePage extends React.Component {
   componentDidMount() {
     axios
       .get(apiURL + apiKey)
+      // .get("http://localhost:5050/videos")
       .then((response) => {
         const allVideos = response.data;
-        console.log(allVideos);
+
         this.setState({ allVideos: allVideos });
         const videoID = this.props.match.params.videoID || response.data[0].id;
         this.getVideoById(videoID);

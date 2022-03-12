@@ -1,5 +1,5 @@
-@import "../../styles/partials/global";
-
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .video {
   &__info {
     display: flex;
@@ -16,9 +16,10 @@
       border-bottom: none;
       padding: 2rem 0 1rem;
     }
-    &-item {
-      @include videoTitle;
-    }
+  }
+
+  &__title-item {
+    @include videoTitle;
   }
 
   &__details {
@@ -32,32 +33,35 @@
     @include desktop {
       margin-right: -2.25rem;
     }
-    &-left {
-      margin-right: 5rem;
-      @include tablet {
-        display: flex;
-        align-items: center;
-      }
+  }
+
+  &__details-left {
+    margin-right: 5rem;
+    @include tablet {
+      display: flex;
+      align-items: center;
     }
-    &-right {
+  }
+
+  &__details-right {
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      margin-right: 2.25rem;
+    }
+  }
+
+  &__details-header {
+    @include label;
+    padding-bottom: 0.5rem;
+    color: $secondary-text-color;
+    font-weight: 400;
+    &--bold {
+      @include subHeader;
+      color: $primary-text;
       @include tablet {
-        display: flex;
-      }
-      @include desktop {
         margin-right: 2.25rem;
-      }
-    }
-    &-header {
-      @include label;
-      padding-bottom: 0.5rem;
-      color: $secondary-text-color;
-      font-weight: 400;
-      &--bold {
-        @include subHeader;
-        color: $primary-text;
-        @include tablet {
-          margin-right: 2.25rem;
-        }
       }
     }
   }
@@ -81,11 +85,12 @@
 
   &__description {
     padding: 1rem 0;
-    &-paragraph {
-      @include bodyCopy;
-    }
     @include desktop {
       padding-top: 1.5rem;
     }
+  }
+
+  &__description-paragraph {
+    @include bodyCopy;
   }
 }
