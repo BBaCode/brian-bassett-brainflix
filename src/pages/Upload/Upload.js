@@ -24,15 +24,15 @@ class Upload extends React.Component {
         .then((response) => {
           console.log(response.data);
         });
+      this.setState({ redirectHome: true });
     }
-    this.setState({ redirectHome: true });
   };
 
   render() {
-    // const redirectToHome = this.state.redirectHome;
-    // if (redirectToHome) {
-    //   return <Redirect to="/" />;
-    // }
+    const redirectToHome = this.state.redirectHome;
+    if (redirectToHome) {
+      return <Redirect to="/" />;
+    }
 
     return (
       <div className="upload">
