@@ -7,9 +7,6 @@ import React from "react";
 import "./HomePage.scss";
 import axios from "axios";
 
-const apiKey = "?api_key=1365d1b4-93fa-4711-a0e7-dba819fc6bde";
-const apiURL = "https://project-2-api.herokuapp.com/videos/";
-
 class HomePage extends React.Component {
   state = {
     allVideos: [],
@@ -19,7 +16,7 @@ class HomePage extends React.Component {
 
   getVideoById = (videoID) => {
     axios
-      .get(apiURL + videoID + apiKey)
+      .get("http://localhost:5050/videos/" + videoID)
       .then((response) => {
         this.setState({
           currentVideo: response.data,
@@ -31,8 +28,8 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     axios
-      .get(apiURL + apiKey)
-      // .get("http://localhost:5050/videos")
+      // .get(apiURL + apiKey)
+      .get("http://localhost:5050/videos")
       .then((response) => {
         const allVideos = response.data;
 

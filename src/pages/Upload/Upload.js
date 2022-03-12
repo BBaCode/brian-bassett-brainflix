@@ -12,25 +12,27 @@ class Upload extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    alert("Video Submitted");
+    if (!e.target.title.value || !e.target.description.value) {
+      alert("Please enter a title and description");
+    } else {
+      alert("Video Submitted");
+      axios
+        .post("http://localhost:5050/videos", {
+          title: e.target.title.value,
+          description: e.target.description.value,
+        })
+        .then((response) => {
+          console.log(response.data);
+        });
+    }
     this.setState({ redirectHome: true });
-    // axios
-    //   .post("api/videos", {
-    //     title: e.target.title.value,
-    //     description: e.target.description.value,
-    //     image: "",
-    //     channel: e.target.channel.value,
-    //   })
-    //   .then((res) => {
-    //     this.props.history.push(`/video/${res.data}`);
-    //   });
   };
 
   render() {
-    const redirectToHome = this.state.redirectHome;
-    if (redirectToHome) {
-      return <Redirect to="/" />;
-    }
+    // const redirectToHome = this.state.redirectHome;
+    // if (redirectToHome) {
+    //   return <Redirect to="/" />;
+    // }
 
     return (
       <div className="upload">
